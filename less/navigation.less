@@ -10,12 +10,31 @@
     padding: 10px 150px;
     border-bottom: 3px dashed grey;
 
-    
+        //tablet layout
+        @media ( max-width: 876px ) {
+            padding: 0;
+            flex-wrap: nowrap;
+        }
+
+        //mobile
+        @media ( max-width: 500px ) {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+
+        
 
     //fun bus logo
     h1 {
         align-self: flex-start;
-        //mobile layout
+
+       //mobile
+       @media ( max-width: 500px ) {
+            padding-bottom: 10px;
+            margin: 0 auto;
+
+        }
 
     }
 
@@ -38,11 +57,26 @@
     width: 800px;
     margin: 0 auto;
     background-image: url("/Users/voidchaser/Lambda/Preprocessing-II/img/fun-bus.jpg");
-    background-size: 1000px 300px;
+    background-size: 1000px 330px;
     background-attachment: fixed;
     background-position: 50% 15%;
     background-repeat: no-repeat;
     border-radius: 0 0 10px 10px;
+    
+    //tablet
+    @media ( max-width: 876px ) {
+        background-position: 50% 10%;
+        width: auto;
+    }
+
+    //mobile
+    @media ( max-width: 500px ) {
+        background-position: 50% 10%;
+        width: auto;
+        height: 250px;
+    }
+
+    
 
     p {
         visibility: hidden;
@@ -58,4 +92,29 @@
     margin: 0 auto 75px;
     padding: 20px 0 0 0;
     border-bottom: 2px dashed grey;
+    .tablet-space
+   
+}
+
+//buttons!
+.content-pick .btn {
+    background-color: rgb(67, 206, 90);
+    border-radius: 50px;
+    border: 2px solid black;
+    font-size: 2em;
+    padding: 10px;
+    margin: 5%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+    @media ( max-width: 500px ) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
 }

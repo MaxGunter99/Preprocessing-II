@@ -1,3 +1,12 @@
+@media (max-width: 876px) {
+  .tablet-space {
+    width: 90%;
+  }
+}
+.reverse {
+  display: flex;
+  align-items: flex-end;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -176,8 +185,27 @@ img {
   padding: 10px 150px;
   border-bottom: 3px dashed grey;
 }
+@media (max-width: 876px) {
+  .navigation {
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+}
 .navigation h1 {
   align-self: flex-start;
+}
+@media (max-width: 500px) {
+  .navigation h1 {
+    padding-bottom: 10px;
+    margin: 0 auto;
+  }
 }
 .navigation nav a {
   font-size: 1.5em;
@@ -195,11 +223,24 @@ img {
   width: 800px;
   margin: 0 auto;
   background-image: url("/Users/voidchaser/Lambda/Preprocessing-II/img/fun-bus.jpg");
-  background-size: 1000px 300px;
+  background-size: 1000px 330px;
   background-attachment: fixed;
   background-position: 50% 15%;
   background-repeat: no-repeat;
   border-radius: 0 0 10px 10px;
+}
+@media (max-width: 876px) {
+  .picture {
+    background-position: 50% 10%;
+    width: auto;
+  }
+}
+@media (max-width: 500px) {
+  .picture {
+    background-position: 50% 10%;
+    width: auto;
+    height: 250px;
+  }
 }
 .picture p {
   visibility: hidden;
@@ -213,6 +254,32 @@ img {
   padding: 20px 0 0 0;
   border-bottom: 2px dashed grey;
 }
+@media (max-width: 876px) {
+  .welcome {
+    width: 90%;
+  }
+}
+.content-pick .btn {
+  background-color: #43ce5a;
+  border-radius: 50px;
+  border: 2px solid black;
+  font-size: 2em;
+  padding: 10px;
+  margin: 5%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .content-pick .btn {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+.content-pick .btn:hover {
+  background-color: #000000;
+  color: white;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -224,32 +291,64 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .home .inverse-content {
+    display: flex;
+  }
+  .home .inverse-content .text-content {
+    order: -1;
+  }
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
 }
-.home .inverse-content {
-  padding-bottom: 30px;
-  border-bottom: 2px dashed #C0C0C0;
-}
-.home .inverse-content .text-content {
+.home .content-section .text-content {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    border-bottom: 1px dashed grey;
+  }
+}
+.home .content-section .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
@@ -266,7 +365,21 @@ img {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
